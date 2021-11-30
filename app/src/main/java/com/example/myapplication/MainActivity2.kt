@@ -37,10 +37,11 @@ class MainActivity2 : AppCompatActivity() {
                     firstPlayed = true
                 }
                 else{
-
                         val list = ('a'..'z').toMutableList()
                         bindingClass.tv.text = list.toString()
+                        bindingClass.btn2.text = "Показать четный алфавит"
                         firstPlayed = false
+
                     }
                 }
 
