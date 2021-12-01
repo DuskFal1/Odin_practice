@@ -5,29 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#575656"
-    tools:context=".MainActivity2">
+    tools:context=".Task1">
 
     <TextView
         android:id="@+id/tvStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Практическое домашнее задание №1"
+        android:text="Домашние задания"
         android:textColor="#FDFDFD"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="200dp"
         android:backgroundTint="#28A1E1"
         android:text="Приступить"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvStart"
         app:layout_constraintStart_toStartOf="@+id/tvStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvStart" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -3,20 +3,20 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
-import com.example.myapplication.databinding.ActivityMain2Binding
+import com.example.myapplication.databinding.Task1Binding
 import com.example.myapplication.databinding.ActivityMainBinding
 
-class MainActivity2 : AppCompatActivity() {
-    lateinit var bindingClass: ActivityMain2Binding
+class Task1 : AppCompatActivity() {
+    lateinit var bindingClass: Task1Binding
 
     var firstPlayed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = ActivityMain2Binding.inflate(layoutInflater)
+        bindingClass = Task1Binding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        bindingClass.tv.text = "[a, b, c, d, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]"
+        bindingClass.tv.text = "[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]"
 
         bindingClass.btn2.setOnClickListener {
             if(!firstPlayed) {

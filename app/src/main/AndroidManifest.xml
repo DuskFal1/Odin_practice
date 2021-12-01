@@ -6,14 +6,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:logo="@drawable/logo"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication"
-        android:logo="@drawable/logo">
+        android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            />
+            android:name=".ListTask"
+            android:exported="false" />
+        <activity
+            android:name=".Task1"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
