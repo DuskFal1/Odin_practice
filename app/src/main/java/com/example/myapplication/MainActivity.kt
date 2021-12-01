@@ -13,10 +13,8 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.View
 
-
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
