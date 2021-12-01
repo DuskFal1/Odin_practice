@@ -1,10 +1,11 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.view.Menu
+import android.view.MenuItem
 import com.example.myapplication.databinding.Task1Binding
-import com.example.myapplication.databinding.ActivityMainBinding
 
 class Task1 : AppCompatActivity() {
     lateinit var bindingClass: Task1Binding
@@ -36,5 +37,30 @@ class Task1 : AppCompatActivity() {
                 firstPlayed = false
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_task, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_home -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.action_to_tasks -> {
+                val intent = Intent(this, ListTask::class.java)
+                startActivity(intent)
+            }
+
+            R.id.action_exit -> {
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
