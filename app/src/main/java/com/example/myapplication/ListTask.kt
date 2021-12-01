@@ -20,6 +20,7 @@ class ListTask : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_tasks, menu)
@@ -31,9 +32,6 @@ class ListTask : AppCompatActivity() {
             R.id.action_home -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-            }
-            R.id.action_exit -> {
-
             }
         }
         return super.onOptionsItemSelected(item)

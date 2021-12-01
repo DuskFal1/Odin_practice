@@ -32,13 +32,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-
             R.id.action_exit -> {
                 exitProcess(-1)
             }
-
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.Task1Binding
+import com.google.android.material.internal.ContextUtils.getActivity
 
 class Task1 : AppCompatActivity() {
     lateinit var bindingClass: Task1Binding
@@ -55,10 +56,6 @@ class Task1 : AppCompatActivity() {
             R.id.action_to_tasks -> {
                 val intent = Intent(this, ListTask::class.java)
                 startActivity(intent)
-            }
-
-            R.id.action_exit -> {
-
             }
         }
         return super.onOptionsItemSelected(item)
