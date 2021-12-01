@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvTask1Header"
+        android:id="@+id/task1Header"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text="Вывести в консоль каждую четную букву алфавита, используя циклы и коллекции."
