@@ -47,14 +47,20 @@ class Task1 : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.action_home -> {
+            R.id.action_to_home -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
 
             R.id.action_to_tasks -> {
                 val intent = Intent(this, ListTask::class.java)
                 startActivity(intent)
+                finish()
+            }
+
+            R.id.action_exit -> {
+                System.exit(0)
             }
         }
         return super.onOptionsItemSelected(item)

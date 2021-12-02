@@ -4,14 +4,20 @@
     tools:context=".ListTask">
 
     <item
-        android:id="@+id/action_home"
+        android:id="@+id/action_to_home"
         android:orderInCategory="1"
-        android:title="@string/action_home"
+        android:title="На главную"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_to_tasks"
         android:orderInCategory="2"
         android:title="@string/action_to_tasks"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="3"
+        android:title="Выход"
         app:showAsAction="never"/>
 </menu>

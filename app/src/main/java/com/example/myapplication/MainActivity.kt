@@ -10,6 +10,7 @@ import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         bindingClass.btnStart.setOnClickListener {
             val intent = Intent(this, ListTask::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_exit -> {
-                exitProcess(-1)
+                System.exit(0)
             }
         }
         return super.onOptionsItemSelected(item)

@@ -18,6 +18,13 @@ class ListTask : AppCompatActivity() {
         bindingClass.btnTask1.setOnClickListener {
             val intent = Intent(this, Task1::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        bindingClass.btnTask2.setOnClickListener {
+            val intent = Intent(this, Task2::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -32,6 +39,11 @@ class ListTask : AppCompatActivity() {
             R.id.action_home -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
+            }
+
+            R.id.action_exit -> {
+                System.exit(0)
             }
         }
         return super.onOptionsItemSelected(item)
