@@ -17,10 +17,8 @@ class MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        val animLogo = AnimationUtils.loadAnimation(this, R.anim.translate_main_logo)
-
-        bindingClass.imageView.startAnimation(animLogo)
-        bindingClass.btnStart.animate().alpha(1f).translationYBy(-400F).duration = 1350
+        bindingClass.imageView.startAnimation(AnimationUtils.loadAnimation(this, R.anim.translate_main_logo))
+        bindingClass.btnStart.animate().translationYBy(-400F).duration = 1350
 
         bindingClass.btnStart.setOnClickListener {
             val intent = Intent(this, ListTask::class.java)
