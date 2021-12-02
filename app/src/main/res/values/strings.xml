@@ -1,6 +1,22 @@
 <resources>
+    <!--App Name-->
     <string name="app_name">Odin Practice</string>
+
+    <!--Menu Button-->
     <string name="action_home">На главную</string>
     <string name="action_to_tasks">К заданиям</string>
     <string name="action_exit">Выход</string>
+
+    <!--Button-->
+    <string name="amButtonStart">Приступить</string>
+    <string name="buttonTask1">Задание №1</string>
+    <string name="buttonTask2">Задание №2</string>
+    <string name="task1ButtonToggle">Показать четный алфавит</string>
+
+    <!--TextView-->
+    <string name="amCentralText">Домашние задания</string>
+    <string name="todo">TODO</string>
+    <string name="ltHeaderText">Выберите задание:</string>
+    <string name="task1Task">Вывести в консоль каждую четную букву алфавита, используя циклы и коллекции.</string>
+    <string name="task2Task">Последовательный вывод строчек стихотворения, используя переопределения событий жизненного цикла активности.</string>
 </resources>

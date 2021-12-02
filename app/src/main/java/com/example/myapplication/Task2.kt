@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.Task2Binding
-import java.util.zip.Inflater
+import kotlin.system.exitProcess
 
 class Task2 : AppCompatActivity() {
-    lateinit var bindingClass: Task2Binding
+    private lateinit var bindingClass: Task2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,7 +78,7 @@ class Task2 : AppCompatActivity() {
             }
 
             R.id.action_exit -> {
-                System.exit(0)
+                exitProcess(0)
             }
         }
         return super.onOptionsItemSelected(item)

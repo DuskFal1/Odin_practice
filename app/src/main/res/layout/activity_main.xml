@@ -11,7 +11,7 @@
         android:id="@+id/tvStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Домашние задания"
+        android:text="@string/amCentralText"
         android:textColor="#FDFDFD"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:backgroundTint="#28A1E1"
-        android:text="Приступить"
+        android:text="@string/amButtonStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvStart"
         app:layout_constraintStart_toStartOf="@+id/tvStart"
@@ -43,5 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.129"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

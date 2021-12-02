@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.Task1Binding
+import kotlin.system.exitProcess
 
 class Task1 : AppCompatActivity() {
-    lateinit var bindingClass: Task1Binding
+    private lateinit var bindingClass: Task1Binding
 
-    var firstPlayed = false
+    private var firstPlayed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +22,11 @@ class Task1 : AppCompatActivity() {
 
         bindingClass.btn2.setOnClickListener {
             if(!firstPlayed) {
-                var list = mutableListOf<Char>() //создаем список List символьных значений Char
+                val list = mutableListOf<Char>() //создаем список List символьных значений Char
                 for (i in 'a'..'z') {            //пробегаемся циклом по алфавиту
                     list.add(i)                  //добавляем букву в алфавит
                 }
-                list.removeAll() { it.code % 2 != 0 }//удаляем нечетные числа
+                list.removeAll { it.code % 2 != 0 }//удаляем нечетные числа
                 bindingClass.tv.text = list.toString()   //проходим циклом по алфавиту, печатаем каждую букву через пробел
                 bindingClass.btn2.text = "Показать исходный алфавит"
                 firstPlayed = true
@@ -60,7 +61,7 @@ class Task1 : AppCompatActivity() {
             }
 
             R.id.action_exit -> {
-                System.exit(0)
+                exitProcess(0)
             }
         }
         return super.onOptionsItemSelected(item)

@@ -6,9 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.ListTaskBinding
+import kotlin.system.exitProcess
 
 class ListTask : AppCompatActivity() {
-    lateinit var bindingClass: ListTaskBinding
+    private lateinit var bindingClass: ListTaskBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +44,7 @@ class ListTask : AppCompatActivity() {
             }
 
             R.id.action_exit -> {
-                System.exit(0)
+                exitProcess(0)
             }
         }
         return super.onOptionsItemSelected(item)
