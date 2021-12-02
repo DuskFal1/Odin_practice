@@ -83,4 +83,10 @@ class Task2 : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, ListTask::class.java)
+        startActivity(intent)
+    }
 }
