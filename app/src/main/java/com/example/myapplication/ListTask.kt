@@ -16,6 +16,7 @@ class ListTask : AppCompatActivity() {
         bindingClass = ListTaskBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
+    //обработка кнопок заданий
         bindingClass.btnTask1.setOnClickListener {
             val intent = Intent(this, Task1::class.java)
             startActivity(intent)
@@ -50,6 +51,7 @@ class ListTask : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    //обрабатываем кнопку назад
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this, MainActivity::class.java)

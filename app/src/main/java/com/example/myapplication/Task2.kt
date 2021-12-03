@@ -16,6 +16,7 @@ class Task2 : AppCompatActivity() {
         bindingClass = Task2Binding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
+        //создаем переменную с текстом
         val textTask2 =
                 "override fun onCreate(savedInstanceState: Bundle?) {\n" +
                 "   super.onCreate(savedInstanceState)\n" +
@@ -54,7 +55,7 @@ class Task2 : AppCompatActivity() {
                 "   Log.d(\"MyTag\", \"Звездою севера явись!\")" +
                 "\n}"
 
-        bindingClass.tvTask2.text = textTask2
+        bindingClass.tvTask2.text = textTask2                           //выводим переменную в текст
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

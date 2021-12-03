@@ -17,25 +17,27 @@ class Task1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = Task1Binding.inflate(layoutInflater)
         setContentView(bindingClass.root)
-
+    //отрисовываем изначальный text view
         bindingClass.tv.text = "[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]"
 
+    //обрабатываем кнопку выполнения задачи
         bindingClass.btn2.setOnClickListener {
+            //проверка состояния кнопки
             if(!firstPlayed) {
-                val list = mutableListOf<Char>() //создаем список List символьных значений Char
-                for (i in 'a'..'z') {            //пробегаемся циклом по алфавиту
-                    list.add(i)                  //добавляем букву в алфавит
+                val list = mutableListOf<Char>()                    //создаем список List символьных значений Char
+                for (i in 'a'..'z') {                               //пробегаемся циклом по алфавиту
+                    list.add(i)                                     //добавляем букву в алфавит
                 }
-                list.removeAll { it.code % 2 != 0 }//удаляем нечетные числа
-                bindingClass.tv.text = list.toString()   //проходим циклом по алфавиту, печатаем каждую букву через пробел
+                list.removeAll { it.code % 2 != 0 }                 //удаляем нечетные числа
+                bindingClass.tv.text = list.toString()              //проходим циклом по алфавиту, печатаем каждую букву через пробел
                 bindingClass.btn2.text = "Показать исходный алфавит"
-                firstPlayed = true
+                firstPlayed = true                                  //переключаем в положение true
             }
             else{
-                val list = ('a'..'z').toMutableList()
-                bindingClass.tv.text = list.toString()
+                val list = ('a'..'z').toMutableList()               //создаем список с буквами алфавита
+                bindingClass.tv.text = list.toString()              //передаем список в текст
                 bindingClass.btn2.text = "Показать четный алфавит"
-                firstPlayed = false
+                firstPlayed = false                                 //переключая в положение false
             }
         }
     }
