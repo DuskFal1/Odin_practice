@@ -1,34 +1,50 @@
 package com.example.myapplication
 
+import android.app.ListActivity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import com.example.myapplication.databinding.ListTaskBinding
 import kotlin.system.exitProcess
 
-class ListTask : AppCompatActivity() {
+class ListTask : ListActivity(){
     private lateinit var bindingClass: ListTaskBinding
+
+    //создаем массив стрингов
+    var list: Array<String> = arrayOf(
+        "Задание 1", "Задание 2",
+        "Задание 3", "Задание 4")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingClass = ListTaskBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-    //обработка кнопок заданий
-        bindingClass.btnTask1.setOnClickListener {
-            val intent = Intent(this, Task1::class.java)
-            startActivity(intent)
-            finish()
-        }
 
-        bindingClass.btnTask2.setOnClickListener {
-            val intent = Intent(this, Task2::class.java)
-            startActivity(intent)
-            finish()
-        }
+        //создаем массив для адаптера и получаем в него значения наш класс/лейаут для 1 позиции/ список из массива list
+        val adapter: ArrayAdapter<String> = ArrayAdapter(
+            this, R.layout.simple_list_item_1, list)
+        // присываеваем адаптер переменной
+        listAdapter = adapter
+
+    //обработка кнопок заданий
+//        bindingClass.btnTask1.setOnClickListener {
+//            val intent = Intent(this, Task1::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+//
+//        bindingClass.btnTask2.setOnClickListener {
+//            val intent = Intent(this, Task2::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
@@ -50,6 +66,33 @@ class ListTask : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onListItemClick(l: ListView?, v: View?, position: Int, id: Long) {
+        super.onListItemClick(l, v, position, id)
+
+        var item: String = listAdapter.getItem(position) as String
+        when (item) {
+            "Задание 1" -> {
+                val intent = Intent(this, Task1::class.java)
+                startActivity(intent)
+                finish()
+            }
+            "Задание 2" -> {
+                val intent = Intent(this, Task2::class.java)
+                startActivity(intent)
+                finish()
+
+            }
+            "Задание 3" -> {
+
+            }
+            "Задание 4" -> {
+
+            }
+
+        }
+    }
+
 
     //обрабатываем кнопку назад
     override fun onBackPressed() {
