@@ -12,6 +12,8 @@
     <string name="buttonTask1">Задание №1</string>
     <string name="buttonTask2">Задание №2</string>
     <string name="task1ButtonToggle">Показать четный алфавит</string>
+    <string name="task3ButtonToggleAS">Показать в Android Studio</string>
+    <string name="task3ButtonToggleFigma">Показать Figma</string>
 
     <!--TextView-->
     <string name="amCentralText">Домашние задания</string>
@@ -19,4 +21,5 @@
     <string name="ltHeaderText">Выберите задание:</string>
     <string name="task1Task">Вывести в консоль каждую четную букву алфавита, используя циклы и коллекции.</string>
     <string name="task2Task">Последовательный вывод строчек стихотворения, используя переопределения событий жизненного цикла активности.</string>
+    <string name="task3Task">Создать приложение с утвержденным дизайном UI элементов и утвержденной цветовой палитрой.</string>
 </resources>

@@ -84,6 +84,9 @@ class ListTask : ListActivity(){
 
             }
             "Задание 3" -> {
+                val intent = Intent(this, Task3::class.java)
+                startActivity(intent)
+                finish()
 
             }
             "Задание 4" -> {
